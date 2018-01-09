@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PFML.Shared\PFML.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup> 
+    <Content Include="Machines\**\*" CopyToPublishDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FACTS.Framework.Analysis" Version="2.0.6576.23137" />
+    <PackageReference Include="FACTS.Framework.Common" Version="2.0.6576.23137" />
+    <PackageReference Include="FACTS.Framework.Web" Version="2.0.6576.23137" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Machines\Sample\Revenue\Search\" />
+  </ItemGroup>
+
+</Project>
