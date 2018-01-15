@@ -33,7 +33,7 @@ namespace PFML.BusinessLogic.Sample.Revenue.Search
 				new Employer(){ AccountNumber="EMP003", ID=3, Name="Deloitte3", AccountProfile="Active" } ,
 				new Employer(){ AccountNumber="EMP004", ID=4, Name="Deloitte4", AccountProfile="Active" } };
 				
-			}
+			} 
 		}
 
 

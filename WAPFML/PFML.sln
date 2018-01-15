@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PFML.Web", "src\PFML.Web\PFML.Web.csproj", "{C25275DE-64D4-41B2-B6C9-F28961C34695}"
 EndProject
@@ -17,6 +17,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{F4FA6974-7115-42CB-8418-AB9A091ACFF4}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PFMLDb", "src\PFMLDb\PFMLDb.sqlproj", "{0335F2B1-648F-4B37-BC2E-72AF18B2DF31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PFML.UnitTest", "src\PFML.UnitTest\PFML.UnitTest.csproj", "{E23CD1FA-41CD-4605-8F76-C338DE94C89E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,6 +88,14 @@ Global
 		{0335F2B1-648F-4B37-BC2E-72AF18B2DF31}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
 		{0335F2B1-648F-4B37-BC2E-72AF18B2DF31}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
 		{0335F2B1-648F-4B37-BC2E-72AF18B2DF31}.ReleaseNet40|Any CPU.Deploy.0 = Release|Any CPU
+		{E23CD1FA-41CD-4605-8F76-C338DE94C89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23CD1FA-41CD-4605-8F76-C338DE94C89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E23CD1FA-41CD-4605-8F76-C338DE94C89E}.DebugNet40|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23CD1FA-41CD-4605-8F76-C338DE94C89E}.DebugNet40|Any CPU.Build.0 = Debug|Any CPU
+		{E23CD1FA-41CD-4605-8F76-C338DE94C89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E23CD1FA-41CD-4605-8F76-C338DE94C89E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E23CD1FA-41CD-4605-8F76-C338DE94C89E}.ReleaseNet40|Any CPU.ActiveCfg = Release|Any CPU
+		{E23CD1FA-41CD-4605-8F76-C338DE94C89E}.ReleaseNet40|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,45 @@
+<Machine IsPublic="False" IsExternal="False" RequirePersonID="False" RequireAgencyID="False" StartState="SelectPaymentMethod">
+  <States>
+    <Page Name="SelectPaymentMethod">
+      <Transitions>
+        <State Name="Next" IsDefault="False" IgnoreData="False" State="CheckPayment" />
+      </Transitions>
+    </Page>
+    <Page Name="Epayment">
+      <Transitions>
+        <State Name="Next" IsDefault="False" IgnoreData="False" State="PaymentVerification" />
+      </Transitions>
+    </Page>
+    <Page Name="PartialPayment">
+      <Transitions>
+        <State Name="Next" IsDefault="False" IgnoreData="False" State="CheckPmtMethod" />
+      </Transitions>
+    </Page>
+    <Decision Name="CheckPayment">
+      <Transitions>
+        <State Name="Partial" IsDefault="False" State="PartialPayment" />
+        <State Name="Full" IsDefault="False" State="CheckPmtMethod" />
+      </Transitions>
+    </Decision>
+    <Decision Name="CheckPmtMethod">
+      <Transitions>
+        <State Name="EPayment" IsDefault="False" State="Epayment" />
+        <State Name="PaperCheck" IsDefault="False" State="PaperCheck" />
+      </Transitions>
+    </Decision>
+    <Page Name="PaymentVerification">
+      <Transitions>
+        <State Name="Submit" IsDefault="False" IgnoreData="False" State="PaymentConfirmation" />
+      </Transitions>
+    </Page>
+    <Page Name="PaymentConfirmation">
+      <Transitions>
+        <State Name="MakePayment" IsDefault="False" IgnoreData="False" State="SelectPaymentMethod" />
+        <State Name="Home" IsDefault="False" IgnoreData="False" State="Home" />
+      </Transitions>
+    </Page>
+    <Page Name="PaperCheck" />
+    <Transfer Name="Home" Machine="Home" OneWay="True" />
+  </States>
+  <Designer>Kj0iSXNSb3VuZGVkQ29ybmVycz1UcnVlCUJyaWRnZVR5cGU9Tm9uZSIAU2VsZWN0UGF5bWVudE1ldGhvZD0iQ29sb3I9I0ZGMDA3MkM2CVBvc2l0aW9uPTYwLDI0MCIAU2VsZWN0UGF5bWVudE1ldGhvZC5OZXh0PSJMaW5lVHlwZT1TdHJhaWdodAlTb3VyY2VDb25uZWN0b3I9YzE1CVN0YXJ0UG9pbnQ9MTgwLDI4MAlFbmRQb2ludD0yODAsMjgwCVRhcmdldENvbm5lY3Rvcj1jMTAiAEVwYXltZW50PSJDb2xvcj0jRkYwMDcyQzYJUG9zaXRpb249NzIwLDI0MCIARXBheW1lbnQuTmV4dD0iTGluZVR5cGU9U3RyYWlnaHQJU291cmNlQ29ubmVjdG9yPWMxNQlTdGFydFBvaW50PTg0MCwyODAJRW5kUG9pbnQ9OTYwLDI4MAlUYXJnZXRDb25uZWN0b3I9YzEyIgBQYXJ0aWFsUGF5bWVudD0iQ29sb3I9I0ZGMDA3MkM2CVBvc2l0aW9uPTI4MCw4MCIAUGFydGlhbFBheW1lbnQuTmV4dD0iTGluZVR5cGU9U3RyYWlnaHQJU291cmNlQ29ubmVjdG9yPWMxNQlTdGFydFBvaW50PTQwMCwxMjAJRW5kUG9pbnQ9NDgwLDI4MAlUYXJnZXRDb25uZWN0b3I9YzEwIgBDaGVja1BheW1lbnQ9IkNvbG9yPSNGRjAwNzJDNglQb3NpdGlvbj0yODAsMjQwIgBDaGVja1BheW1lbnQuUGFydGlhbD0iTGluZVR5cGU9U3RyYWlnaHQJU291cmNlQ29ubmVjdG9yPWMwCVN0YXJ0UG9pbnQ9MzQwLDI0MAlFbmRQb2ludD0zNDAsMTYwCVRhcmdldENvbm5lY3Rvcj1jNiIAQ2hlY2tQYXltZW50LkZ1bGw9IkxpbmVUeXBlPVN0cmFpZ2h0CVNvdXJjZUNvbm5lY3Rvcj1jMTMJU3RhcnRQb2ludD00MDAsMjgwCUVuZFBvaW50PTQ4MCwyODAJVGFyZ2V0Q29ubmVjdG9yPWMxMCIAQ2hlY2tQbXRNZXRob2Q9IkNvbG9yPSNGRjAwNzJDNglQb3NpdGlvbj00ODAsMjQwIgBDaGVja1BtdE1ldGhvZC5FUGF5bWVudD0iTGluZVR5cGU9U3RyYWlnaHQJU291cmNlQ29ubmVjdG9yPWMxMwlTdGFydFBvaW50PTYwMCwyODAJRW5kUG9pbnQ9NzIwLDI4MAlUYXJnZXRDb25uZWN0b3I9YzEyIgBDaGVja1BtdE1ldGhvZC5QYXBlckNoZWNrPSJMaW5lVHlwZT1TdHJhaWdodAlTb3VyY2VDb25uZWN0b3I9YzAJU3RhcnRQb2ludD01NDAsMjQwCUVuZFBvaW50PTU0MCwxNjAJVGFyZ2V0Q29ubmVjdG9yPWM2IgBQYXltZW50VmVyaWZpY2F0aW9uPSJDb2xvcj0jRkYwMDcyQzYJUG9zaXRpb249OTYwLDI0MCIAUGF5bWVudFZlcmlmaWNhdGlvbi5TdWJtaXQ9IkxpbmVUeXBlPVN0cmFpZ2h0CVNvdXJjZUNvbm5lY3Rvcj1jNglTdGFydFBvaW50PTEwMjAsMzIwCUVuZFBvaW50PTEwMjAsNDIwCVRhcmdldENvbm5lY3Rvcj1jMCIAUGF5bWVudENvbmZpcm1hdGlvbj0iQ29sb3I9I0ZGMDA3MkM2CVBvc2l0aW9uPTk2MCw0MjAiAFBheW1lbnRDb25maXJtYXRpb24uTWFrZVBheW1lbnQ9IkxpbmVUeXBlPVN0cmFpZ2h0CVNvdXJjZUNvbm5lY3Rvcj1jMTIJU3RhcnRQb2ludD0wLDAJRW5kUG9pbnQ9MTQwLjAwMDQsMzIwCVRhcmdldENvbm5lY3Rvcj1jOCIAUGF5bWVudENvbmZpcm1hdGlvbi5Ib21lPSJMaW5lVHlwZT1TdHJhaWdodAlTb3VyY2VDb25uZWN0b3I9YzYJU3RhcnRQb2ludD0xMDIwLDUwMAlFbmRQb2ludD0xMDIwLDU4MAlUYXJnZXRDb25uZWN0b3I9YzAiAFBhcGVyQ2hlY2s9IkNvbG9yPSNGRjAwNzJDNglQb3NpdGlvbj00ODAsODAiAEhvbWU9IkNvbG9yPSNGRjAwNzJDNglQb3NpdGlvbj05NjAsNTgwIg==</Designer>
+</Machine>
