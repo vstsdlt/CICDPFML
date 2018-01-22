@@ -1,0 +1,122 @@
+﻿@Html.Partial("WizardHeader", Machine["ListSection"], new ViewDataDictionary(this.ViewData) { { "current", (FACTS.Framework.Lookup.LookupCode)Machine["CurrentSection"] }, { "showHeader", (bool)Machine["ShowHeader"] } })
+
+@using (Form())
+{
+    @using (Panel(stateFilter: "RegistrationSummary", panelLayout: PanelLayout.Stacked,borderVisible:false))
+    {
+        @using (Panel(headingText: "Registration Summary/Edit", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            <p><b>Your registration is almost complete!</b></p>
+            <p><b>Print this page and keep a copy for your records.</b> Scroll down to review and 'Submit' the registration information.To correct information in a section click 'Previous'.
+</p>
+        }
+        @using (Panel(headingText: "Confirm Registration Information", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            @Data(labelText: "Initiated for Wage Claim?", dataSource: "acd")
+            @Data(labelText: "Is the employer registering currently paying wages for services performed?", dataSource: "SrvcPerformed")
+            @Data(labelText: "If yes, how many individuals are being paid for services performed in State?", dataSource: "EmpNumber", formatter: Formatter.Number)
+            @Data(labelText: "If yes, enter the date services were first performed for the employer in State?", formatter: Formatter.Date, dataSource: "CovDate")
+            @Data(labelText: "If yes, enter the date this employer first paid wages to those individuals performing services in State?", formatter: Formatter.Date, dataSource: "FWageDate")
+            @Data(labelText: "Enter this employer’s Federal Employer Identification Number(FEIN):", dataSource: "Fein", formatter: Formatter.TextNumeric)
+        }
+        @using (Panel(headingText: "Employment Liability- Wages Paid", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            @Data(labelText: "During the current calendar year or the preceding four calendar years, was there any calendar quarter in which this employer paid wages of at least $450 for covered service in non-agricultural (regular) employment?", lookupName: LookupTable.BoolYesNo, dataSource: "a")
+            @Data(labelText: "During the current calendar year or the preceding four calendar years, was there any calendar quarter in which this employer paid wages of $20,000 or more for agricultural labor?", lookupName: LookupTable.BoolYesNo, dataSource: "b")
+            @Data(labelText: "During the current calendar year or the preceding four calendar years, was there any calendar quarter in which this employer paid wages of $1,000 or more for domestic service in a private home, local college club or local chapter of a college fraternity or sorority?", lookupName: LookupTable.BoolYesNo, dataSource: "c")
+            @Data(labelText: "If yes to any of the above, select the quarter and year during which this amount was first met:", dataSource: "d", securityFilter: "a=='Y' || c=='Y' || b=='Y'", labelColumns: 4, controlColumns: 2)
+            @Data(labelText: "", dataSource: "h", securityFilter: "a=='Y' || g=='Y' || b=='Y'", labelColumns: 0, controlColumns: 2)
+            @Data(labelText: "If yes to any of the above, provide the total gross wages (paid to date) within the selected quarter:", formatter: Formatter.Currency, dataSource: "e", securityFilter: "a=='Y' || c=='Y' || b=='Y'")
+        }
+        @using (Panel(headingText: "Employment Liability – Weeks Worked", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            @Data(labelText: "During the current calendar year or the preceding four calendar years did this employer employ one or more persons in each of 20 separate weeks for covered services in non agricultural (regular) employment?", lookupName: LookupTable.BoolYesNo, dataSource: "i")
+            @Data(labelText: "During the current calendar year or the preceding four calendar years did this employer have ten (10) or more employees in each of 20 separate weeks in agricultural employment?", lookupName: LookupTable.BoolYesNo, dataSource: "j")
+            @Data(labelText: "If yes to any of the above, select the quarter and year during which the 20th week was met:", dataSource: "k", securityFilter: "i=='Y' || j=='Y'", labelColumns: 4, controlColumns: 2)
+            @Data(labelText: "", dataSource: "h", securityFilter: "i=='Y' || j=='Y'", labelColumns: 0, controlColumns: 2)
+        }
+        @using (Panel(headingText: "Administrator Information", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            @Data(labelText: "First Name:", dataSource: "firstname")
+            @Data(labelText: "Last Name:", dataSource: "lastname")
+            @Data(labelText: "Business Phone:", dataSource: "bp")
+            @Data(labelText: "Secondary Phone:", dataSource: "sp")
+            @Data(labelText: "Administrator Title:", dataSource: "at")
+            @Data(labelText: "Username:", dataSource: "username")
+            @Data(labelText: "E-Mail:", dataSource: "email")
+        }
+        @using (Panel(headingText: "Employer Identification Information", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            @Data(labelText: "Legal Entity Type:", dataSource: "firstname", lookupName: LookupTable.LegalEntity)
+            @Data(labelText: "Legal Name:", dataSource: "lastname")
+            @Data(labelText: "DBA Name:", dataSource: "bp")
+            @Data(labelText: "Mailing Address Line 1:", dataSource: "bpext")
+            @Data(labelText: "Mailing Address Line 2:", dataSource: "sp")
+            @Data(labelText: "City:", dataSource: "spext")
+            @Data(labelText: "State", dataSource: "at", lookupName: LookupTable.State)
+            @Data(labelText: "ZIP/Postal Code:", dataSource: "username")
+            @Data(labelText: "Country:", dataSource: "pass", lookupName: LookupTable.Country)
+            @Data(labelText: "Business Phone Number:", dataSource: "repass")
+            @Data(labelText: "Business Fax Number:", dataSource: "reemail")
+            @Data(labelText: "Business E-Mail Address:", dataSource: "repass")
+            @Data(labelText: "Communication Method:", dataSource: "reemail",lookupName:LookupTable.CommunicationMethod)
+        }
+        @using (Panel(headingText: "Business Information", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            @Data(labelText: "Legal Entity Type:", dataSource: "firstname", lookupName: LookupTable.LegalEntity)
+            @Data(labelText: "Business Type:", dataSource: "lastname", lookupName: LookupTable.BusinessType)
+            @Data(labelText: "FEIN:", dataSource: "Fein")
+            @Data(labelText: "Will this employer act as a Professional Employer Organization(PEO)?", lookupName: LookupTable.BoolYesNo, dataSource: "peo")
+            @Data(labelText: "Is this employer the client of a PEO?", lookupName: LookupTable.BoolYesNo, dataSource: "cpeo")
+            @Data(labelText: "Does this employer have workers that are exempt under NMAC 51-1-42.F(12)?", lookupName: LookupTable.BoolYesNo, dataSource: "namc")
+            @Data(labelText: "Does this employer have workers considered to be independent contractors?", lookupName: LookupTable.BoolYesNo, dataSource: "cont")
+            @Data(labelText: "Is this employer a non-profit organization (hospitals, schools, municipalities & counties) that holds an exemption from federal income taxes as described under Section 501(c)(3)501(c)(3)of the Internal Revenue Code?", lookupName: LookupTable.BoolYesNo, dataSource: "peo")
+            @Data(labelText: "If yes, is this employer applying for Reimbursable Cost Basis Financing under State 51-1-13?", lookupName: LookupTable.BoolYesNo, dataSource: "cpeo")
+            @Data(labelText: "Did this employer acquire any or all of an employing enterprise currently registered with this agency? (To include assets, inventory and employees)?", lookupName: LookupTable.BoolYesNo, dataSource: "namc")
+            @Data(labelText: "Was a purchase agreement, Bill of Sale or other legal instrument used to document this acquisition? You will be required to furnish a copy of the document prior to completion of transfer:", lookupName: LookupTable.BoolYesNo, dataSource: "cont")
+            @Data(labelText: "Is there more than one physical location in State?", lookupName: LookupTable.BoolYesNo, dataSource: "phyloca")
+            @Data(labelText: "If yes, how many?", dataSource: "cont")
+        }
+        @using (Panel(headingText: "Physical Location", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            @Data(labelText: "Do you have physical location in State:", lookupName: LookupTable.BoolYesNo, dataSource: "lastname")
+            @Data(labelText: "Does this employer have a statewide unit in State:", lookupName: LookupTable.BoolYesNo, dataSource: "bp")
+            @Data(labelText: "Address Line 1:", dataSource: "bpext")
+            @Data(labelText: "Address Line 2:", dataSource: "sp")
+            @Data(labelText: "City:", dataSource: "spext")
+            @Data(labelText: "State:", dataSource: "at", lookupName: LookupTable.State)
+            @Data(labelText: "ZIP/Postal Code:", dataSource: "username")
+            @Data(labelText: "Country:", dataSource: "pass", lookupName: LookupTable.Country)
+            @Data(labelText: "Business Phone Number:", dataSource: "repass")
+            @Data(labelText: "Business Fax:", dataSource: "repass")
+            @Data(labelText: "Business E-Mail Address:", dataSource: "email")
+        }
+        @using (Panel(headingText: "Business Records Location Address", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            @Data(labelText: "Address Line 1:", dataSource: "bpext")
+            @Data(labelText: "Address Line 2:", dataSource: "sp")
+            @Data(labelText: "City:", dataSource: "spext")
+            @Data(labelText: "State:", dataSource: "at", lookupName: LookupTable.State)
+            @Data(labelText: "ZIP/Postal Code:", dataSource: "username")
+            @Data(labelText: "Country:", dataSource: "pass", lookupName: LookupTable.Country)
+            @Data(labelText: "Business Phone Number:", dataSource: "repass")
+            @Data(labelText: "Business Fax:", dataSource: "repass")
+            @Data(labelText: "Business E-Mail Address:", dataSource: "email")
+        }
+        @using (Panel(headingText: "Certification", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            <p><b>Upon submission of this application:</b></p>
+            <ul>
+                <li>I understand, the information I provide in this application will be used to determine liability to pay into the unemployment fund as prescribed in the Unemployment Compensation Law of State (Section 51-1-11 NMSA 1978) and other purposes authorized by Law.</li>
+                <li>I certify, all of the information provided in this filing is complete, true and accurate. State Law provides for civil fines and criminal penalties for misinterpretation, evasion, willful non-disclosure, and failure or refusal to furnish reports or requested information to this Agency.</li>
+            </ul>
+            <p><b>Acknowledge this certification by clicking 'Submit' to process your registration information.</b></p>
+            <p><b>Print this page and keep a copy for your records.</b></p>
+        }
+        @using (Panel(borderVisible: false, panelLayout: PanelLayout.Inline, cssClass: "text-center"))
+        {
+            @Button(transition: "Previous")
+            @Button(transition: "Submit")
+        }
+    }
+}

@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FACTS.Framework.Analysis" Version="2.0.6576.23137" />
-    <PackageReference Include="FACTS.Framework.Common" Version="2.0.6576.23137" />
+    <PackageReference Include="FACTS.Framework.Analysis" Version="2.0.6596.20939" />
+    <PackageReference Include="FACTS.Framework.Common" Version="2.0.6596.20939" />
   </ItemGroup>
 
 </Project>

@@ -36,6 +36,12 @@ namespace PFML.Shared.Model.DbDtos
         /// <summary>[UpdateDateTime]</summary>
         public DateTime UpdateDateTime { get; set; }
 
+        /// <summary>[UpdateNumber]</summary>
+        public int? UpdateNumber { get; set; }
+
+        /// <summary>[UpdateProcess]</summary>
+        public string UpdateProcess { get; set; }
+
         /// <summary>[UpdateUserId]</summary>
         public string UpdateUserId { get; set; }
 

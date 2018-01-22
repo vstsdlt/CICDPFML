@@ -1,0 +1,15 @@
+﻿@using (Form())
+{
+    @using (Panel(headingText: "Check Sample ", panelLayout: PanelLayout.Grid, modalStyle: ModalStyle.Large, stateFilter: "SampleCheck", defaultLabelColumns: 0, defaultControlColumns: 12))
+    {
+        <div>
+            <img src="~/img/SampleCheckImage.jpg" alt="Check Sample Image" />
+            <br /><br />
+        </div>
+
+        @using (Panel(borderVisible: false, panelLayout: PanelLayout.Inline, cssClass: "text-center"))
+        {
+            @Button(transition: "Back", text: "Close")
+        }
+    }
+}

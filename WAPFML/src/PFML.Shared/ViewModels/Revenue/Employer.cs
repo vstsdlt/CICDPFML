@@ -28,6 +28,25 @@ namespace PFML.Shared.ViewModels.Revenue
 		public bool InitiatedForWageClaim { get; set; }
 		public string NMPRC { get; set; }
 		public string CRS { get; set; }
+		public string EmployerStatus { get; set; }
+		public string TaxRepresentative { get; set; }
+		public DateTime ReativationDate { get; set; }
+		public DateTime OutofBusinessDate { get; set; }
+		public DateTime BankruptcyDate { get; set; }
+		public string BankruptcyChapter { get; set; }
+		public decimal CurrentUIContributionRate { get; set; }
+		public decimal PreviousUIContributionRate { get; set; }
+		public string LegalEntityType { get; set; }
+		public string BusinessType { get; set; }
+		public int IncorporationFormationState { get; set; }
+		public DateTime IncorporationFormationDate { get; set; }
+		public bool HasMultipleReportingUnits { get; set; }
+		public DateTime NAICS { get; set; }
+		public bool C501 { get; set; }
+		public bool UsingLeasingCompany { get; set; }
+		public string Notes { get; set; }
+
+
 	}
 	[Serializable]
 	public class EmployerSearchResult

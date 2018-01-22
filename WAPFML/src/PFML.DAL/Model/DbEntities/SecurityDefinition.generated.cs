@@ -62,6 +62,15 @@ namespace PFML.DAL.Model.DbEntities
         [ConcurrencyCheck]
         public DateTime UpdateDateTime { get; set; }
 
+        /// <summary>[UpdateNumber]</summary>
+        [Column("UpdateNumber")]
+        public int? UpdateNumber { get; set; }
+
+        /// <summary>[UpdateProcess]</summary>
+        [MaxLength(100)]
+        [Column("UpdateProcess")]
+        public string UpdateProcess { get; set; }
+
         /// <summary>[UpdateUserId]</summary>
         [Required]
         [MaxLength(85)]
@@ -71,7 +80,7 @@ namespace PFML.DAL.Model.DbEntities
         public override void SetAuditFields(EntityState state)
         {
             string username = FACTS.Framework.Service.Context.UserName ?? "UNKNOWN";
-            DateTime timestamp = DateTime.Now;
+            DateTime timestamp = FACTS.Framework.Utility.DateTimeUtil.Now;
 
             if (state == EntityState.Added)
             {
@@ -79,11 +88,15 @@ namespace PFML.DAL.Model.DbEntities
                 CreateDateTime = new System.Data.SqlTypes.SqlDateTime(timestamp).Value;
                 UpdateUserId = username;
                 UpdateDateTime = new System.Data.SqlTypes.SqlDateTime(timestamp).Value;
+                UpdateNumber = 0;
+                UpdateProcess = FACTS.Framework.Utility.StringUtil.CapLength(FACTS.Framework.Service.Context.Process.ToString(), 100);
             }
             else if (state == EntityState.Modified)
             {
                 UpdateUserId = username;
                 UpdateDateTime = new System.Data.SqlTypes.SqlDateTime(timestamp).Value;
+                UpdateNumber = (UpdateNumber ?? 0) + 1;
+                UpdateProcess = FACTS.Framework.Utility.StringUtil.CapLength(FACTS.Framework.Service.Context.Process.ToString(), 100);
             }
         }
 
@@ -93,6 +106,7 @@ namespace PFML.DAL.Model.DbEntities
             builder.Entity<SecurityDefinition>().Property(x => x.Description).IsUnicode(false);
             builder.Entity<SecurityDefinition>().Property(x => x.Name).IsUnicode(false);
             builder.Entity<SecurityDefinition>().Property(x => x.Type).IsUnicode(false);
+            builder.Entity<SecurityDefinition>().Property(x => x.UpdateProcess).IsUnicode(false);
             builder.Entity<SecurityDefinition>().Property(x => x.UpdateUserId).IsUnicode(false);
         }
 
@@ -135,6 +149,8 @@ namespace PFML.DAL.Model.DbEntities
             dto.Name = Name;
             dto.Type = Type;
             dto.UpdateDateTime = UpdateDateTime;
+            dto.UpdateNumber = UpdateNumber;
+            dto.UpdateProcess = UpdateProcess;
             dto.UpdateUserId = UpdateUserId;
 
             return dto;
@@ -162,6 +178,8 @@ namespace PFML.DAL.Model.DbEntities
             entity.Name = dto.Name;
             entity.Type = dto.Type;
             entity.UpdateDateTime = dto.UpdateDateTime;
+            entity.UpdateNumber = dto.UpdateNumber;
+            entity.UpdateProcess = dto.UpdateProcess;
             entity.UpdateUserId = dto.UpdateUserId;
 
 

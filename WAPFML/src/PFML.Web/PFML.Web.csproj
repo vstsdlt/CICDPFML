@@ -13,9 +13,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FACTS.Framework.Analysis" Version="2.0.6576.23137" />
-    <PackageReference Include="FACTS.Framework.Common" Version="2.0.6576.23137" />
-    <PackageReference Include="FACTS.Framework.Web" Version="2.0.6576.23137" />
+    <Compile Remove="Views\Premium\Registration\NewFolder\**" />
+    <Content Remove="Views\Premium\Registration\NewFolder\**" />
+    <EmbeddedResource Remove="Views\Premium\Registration\NewFolder\**" />
+    <None Remove="Views\Premium\Registration\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Machines\ControlLibraryTest.dsm" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FACTS.Framework.Analysis" Version="2.0.6596.20939" />
+    <PackageReference Include="FACTS.Framework.Common" Version="2.0.6596.20939" />
+    <PackageReference Include="FACTS.Framework.Web" Version="2.0.6596.20939" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.1" />
@@ -24,7 +35,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Machines\Sample\Revenue\Search\" />
+    <None Include="Views\ControlLibraryTest\Basic.cshtml" />
+    <None Include="Views\ControlLibraryTest\DataTable.cshtml" />
+    <None Include="Views\ControlLibraryTest\DataTableFilter.cshtml" />
+    <None Include="Views\ControlLibraryTest\Format.cshtml" />
+    <None Include="Views\ControlLibraryTest\Layout.cshtml" />
+    <None Include="Views\ControlLibraryTest\Lookup.cshtml" />
+    <None Include="Views\ControlLibraryTest\LookupFilter.cshtml" />
+    <None Include="Views\ControlLibraryTest\Menu.cshtml" />
+    <None Include="Views\ControlLibraryTest\Modal1.cshtml" />
+    <None Include="Views\ControlLibraryTest\Modal2.cshtml" />
+    <None Include="Views\ControlLibraryTest\SecurityFilter.cshtml" />
+    <None Include="Views\ControlLibraryTest\Submachine.cshtml" />
+    <None Include="Views\ControlLibraryTest\TabGroup.cshtml" />
+    <None Include="Views\ControlLibraryTest\Transfer.cshtml" />
+    <None Include="Views\ControlLibraryTest\Validate.cshtml" />
+    <None Include="Views\Premium\Waiver\VPRequest\NewRequest.cshtml" />
+    <None Include="Views\Premium\Waiver\VPRequest\Request.cshtml" />
+    <None Include="Views\Premium\Waiver\VPRequest\ViewRequest.cshtml" />
   </ItemGroup>
 
 </Project>

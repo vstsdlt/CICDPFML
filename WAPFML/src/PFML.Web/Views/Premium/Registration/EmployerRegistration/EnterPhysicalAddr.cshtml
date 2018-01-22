@@ -1,0 +1,31 @@
+﻿@Html.Partial("WizardHeader", Machine["ListSection"], new ViewDataDictionary(this.ViewData) { { "current", (FACTS.Framework.Lookup.LookupCode)Machine["CurrentSection"] }, { "showHeader", (bool)Machine["ShowHeader"] } })
+
+@using (Form())
+{
+    @using (Panel(stateFilter: "EnterPhysicalAddr", panelLayout: PanelLayout.Stacked,borderVisible:false))
+    {
+        @using (Panel(headingText: "Enter Address - Physical Location", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            <p>Enter the State physical location address for this employer. This address cannot be a Post Office box or private mail box. DO NOT: enter a client site, other temporary job site, or employee home address.</p>
+            @SelectBox(labelText: "Same as:",lookupName:LookupTable.AddressType,lookupFilter: "code='MAIL'", dataSource:"sameas2",blankItemText:"Select One")
+            @RadioButtonGroup(labelText: "Do you have physical location in State:", lookupName: LookupTable.BoolYesNo,lookupSort:"{DisplaySortOrder}", dataSource: "ab", required: "true")
+            @RadioButtonGroup(labelText: "Does this employer have a statewide unit in State:", lookupName: LookupTable.BoolYesNo, lookupSort: "{DisplaySortOrder}", dataSource: "bp", required: "true")
+            @TextBox(labelText: "Address Line 1:", formatter: Formatter.TextAlphaNumeric, dataSource: "phyadd1")
+            @TextBox(labelText: "Address Line 2:", formatter: Formatter.TextAlphaNumeric, dataSource: "phyadd2")
+            @TextBox(labelText: "City:", formatter: Formatter.TextAlpha, dataSource: "phycity")
+            @Data(labelText: "State:",text:LookupTable_State.Washington,lookupName:LookupTable.State, dataSource: "phystate")
+            @TextBox(labelText: "ZIP/Postal Code:", formatter: Formatter.Postal, dataSource: "phypostal")
+            @Data(labelText: "Country:", text:LookupTable_Country.UnitedStates,lookupName:LookupTable.Country, dataSource: "phycountry")
+            @TextBox(labelText: "Phone (Required if U.S. or Canada address):", formatter: Formatter.Phone, dataSource: "phybusphone",labelColumns:4,controlColumns:2)
+            @TextBox(labelText: "ext:", dataSource: "phybusext", formatter: Formatter.TextNumeric,labelColumns:1,controlColumns:1)
+            @TextBox(labelText: "Fax:", formatter: Formatter.TextNumeric, dataSource: "phyfax")
+            @TextBox(labelText: "E-Mail:", formatter: Formatter.Email, dataSource: "phyemail")
+            @TextBox(labelText: "Re-Enter E-Mail:", formatter: Formatter.Email, dataSource: "phyreemail")
+        }
+        @using (Panel(borderVisible: false, panelLayout: PanelLayout.Inline, cssClass: "text-center"))
+        {
+            @Button(transition: "Previous")
+            @Button(transition: "Next")
+        }
+    }
+}

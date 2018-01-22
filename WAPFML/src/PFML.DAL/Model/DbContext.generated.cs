@@ -7,11 +7,7 @@
 // ----------------------------------------------------------------------------------------------------
 
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Data.Entity;
-using System.Data.Entity.Core.Mapping;
-using System.Data.Entity.Core.Metadata.Edm;
 using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
@@ -25,7 +21,7 @@ namespace PFML.DAL.Model
     {
 
         protected override string ModelPrefix { get { return "Db"; } }
-        protected override string ModelVersion { get { return "180102145717"; } }
+        protected override string ModelVersion { get { return "180122190622"; } }
 
         /// <summary>Static initializer to remove initial calls to DB (not requred if not using migrations)</summary>
         static DbContext()
@@ -46,6 +42,39 @@ namespace PFML.DAL.Model
             };
         }
 
+        /// <summary>[Table: Address]</summary>
+        public virtual DbSet<Address> Addresses { get; set; }
+
+        /// <summary>[Table: AddressLink]</summary>
+        public virtual DbSet<AddressLink> AddressLinks { get; set; }
+
+        /// <summary>[Table: Document]</summary>
+        public virtual DbSet<Document> Documents { get; set; }
+
+        /// <summary>[Table: Employer]</summary>
+        public virtual DbSet<Employer> Employers { get; set; }
+
+        /// <summary>[Table: EmployerAccountTransaction]</summary>
+        public virtual DbSet<EmployerAccountTransaction> EmployerAccountTransactions { get; set; }
+
+        /// <summary>[Table: EmployerContact]</summary>
+        public virtual DbSet<EmployerContact> EmployerContacts { get; set; }
+
+        /// <summary>[Table: EmployerLiability]</summary>
+        public virtual DbSet<EmployerLiability> EmployerLiabilities { get; set; }
+
+        /// <summary>[Table: EmployerPreference]</summary>
+        public virtual DbSet<EmployerPreference> EmployerPreferences { get; set; }
+
+        /// <summary>[Table: EmployerUnit]</summary>
+        public virtual DbSet<EmployerUnit> EmployerUnits { get; set; }
+
+        /// <summary>[Table: Form]</summary>
+        public virtual DbSet<Form> Forms { get; set; }
+
+        /// <summary>[Table: FormAttachment]</summary>
+        public virtual DbSet<FormAttachment> FormAttachments { get; set; }
+
         /// <summary>[Table: LookupCode]</summary>
         public virtual DbSet<LookupCode> LookupCodes { get; set; }
 
@@ -58,21 +87,35 @@ namespace PFML.DAL.Model
         /// <summary>[Table: LookupValue]</summary>
         public virtual DbSet<LookupValue> LookupValues { get; set; }
 
+        /// <summary>[Table: PaymentMain]</summary>
+        public virtual DbSet<PaymentMain> PaymentMains { get; set; }
+
+        /// <summary>[Table: PaymentProfile]</summary>
+        public virtual DbSet<PaymentProfile> PaymentProfiles { get; set; }
+
         /// <summary>[Table: SecurityDefinition]</summary>
         public virtual DbSet<SecurityDefinition> SecurityDefinitions { get; set; }
 
         /// <summary>[Table: SecurityPermission]</summary>
         public virtual DbSet<SecurityPermission> SecurityPermissions { get; set; }
 
+        /// <summary>[Table: TaxableAmountSum]</summary>
+        public virtual DbSet<TaxableAmountSum> TaxableAmountSums { get; set; }
+
+        /// <summary>[Table: TaxRate]</summary>
+        public virtual DbSet<TaxRate> TaxRates { get; set; }
+
+        /// <summary>[Table: VoluntaryPlanWaiverRequest]</summary>
+        public virtual DbSet<VoluntaryPlanWaiverRequest> VoluntaryPlanWaiverRequests { get; set; }
+
+        /// <summary>[Table: VoluntaryPlanWaiverRequestType]</summary>
+        public virtual DbSet<VoluntaryPlanWaiverRequestType> VoluntaryPlanWaiverRequestTypes { get; set; }
+
+        /// <summary>[Table: WageUnitDetail]</summary>
+        public virtual DbSet<WageUnitDetail> WageUnitDetails { get; set; }
+
         ///<summary>IQueryable to use for returing only a single row from a DB query</summary>
         public IQueryable<LookupCode> DummyRecord { get { return LookupCodes.Take(1); } }
-
-        /// <summary>DB Procedure: [sp_Person]</summary>
-        /// <returns>Number of rows affected</returns>
-        public virtual int SPPerson()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Person");
-        }
 
         #region Model Creation
 
@@ -80,46 +123,59 @@ namespace PFML.DAL.Model
         {
             DbModelBuilder builder = new DbModelBuilder();
 
+            builder.Entity<Address>();
+            builder.Entity<AddressLink>();
+            builder.Entity<Document>();
+            builder.Entity<Employer>();
+            builder.Entity<EmployerAccountTransaction>();
+            builder.Entity<EmployerContact>();
+            builder.Entity<EmployerLiability>();
+            builder.Entity<EmployerPreference>();
+            builder.Entity<EmployerUnit>();
+            builder.Entity<Form>();
+            builder.Entity<FormAttachment>();
             builder.Entity<LookupCode>();
             builder.Entity<LookupName>();
             builder.Entity<LookupProperty>();
             builder.Entity<LookupValue>();
+            builder.Entity<PaymentMain>();
+            builder.Entity<PaymentProfile>();
             builder.Entity<SecurityDefinition>();
             builder.Entity<SecurityPermission>();
+            builder.Entity<TaxableAmountSum>();
+            builder.Entity<TaxRate>();
+            builder.Entity<VoluntaryPlanWaiverRequest>();
+            builder.Entity<VoluntaryPlanWaiverRequestType>();
+            builder.Entity<WageUnitDetail>();
 
+            DbEntities.Address.ModelCreating(builder);
+            DbEntities.AddressLink.ModelCreating(builder);
+            DbEntities.Document.ModelCreating(builder);
+            DbEntities.Employer.ModelCreating(builder);
+            DbEntities.EmployerAccountTransaction.ModelCreating(builder);
+            DbEntities.EmployerContact.ModelCreating(builder);
+            DbEntities.EmployerLiability.ModelCreating(builder);
+            DbEntities.EmployerPreference.ModelCreating(builder);
+            DbEntities.EmployerUnit.ModelCreating(builder);
+            DbEntities.Form.ModelCreating(builder);
+            DbEntities.FormAttachment.ModelCreating(builder);
             DbEntities.LookupCode.ModelCreating(builder);
             DbEntities.LookupName.ModelCreating(builder);
             DbEntities.LookupProperty.ModelCreating(builder);
             DbEntities.LookupValue.ModelCreating(builder);
+            DbEntities.PaymentMain.ModelCreating(builder);
+            DbEntities.PaymentProfile.ModelCreating(builder);
             DbEntities.SecurityDefinition.ModelCreating(builder);
             DbEntities.SecurityPermission.ModelCreating(builder);
+            DbEntities.TaxableAmountSum.ModelCreating(builder);
+            DbEntities.TaxRate.ModelCreating(builder);
+            DbEntities.VoluntaryPlanWaiverRequest.ModelCreating(builder);
+            DbEntities.VoluntaryPlanWaiverRequestType.ModelCreating(builder);
+            DbEntities.WageUnitDetail.ModelCreating(builder);
 
             DbModel model = builder.Build(new DbProviderInfo("System.Data.SqlClient", "2008"));
 
-            ReadOnlyCollection<PrimitiveType> storeTypes = model.ProviderManifest.GetStoreTypes();
-            BuildSPPerson(model, storeTypes);
-
             return model;
-        }
-
-        private static EdmType GetEdmType(DbModel model, ReadOnlyCollection<PrimitiveType> storeTypes, PrimitiveTypeKind typeKind)
-        {
-            return model.ProviderManifest.GetStoreType(TypeUsage.CreateDefaultTypeUsage(PrimitiveType.GetEdmPrimitiveType(typeKind))).EdmType;
-        }
-
-        private static void BuildSPPerson(DbModel model, ReadOnlyCollection<PrimitiveType> storeTypes)
-        {
-            EdmFunctionPayload payload = new EdmFunctionPayload { Schema = "dbo", StoreFunctionName = "sp_Person", IsComposable = false };
-            EdmFunction function = EdmFunction.Create("sp_Person", "CodeFirstDatabaseSchema", DataSpace.SSpace, payload, null);
-            model.StoreModel.AddItem(function);
-
-            EdmFunctionPayload payloadImport = new EdmFunctionPayload { IsFunctionImport = true, IsComposable = false };
-            EdmFunction functionImport = EdmFunction.Create("sp_Person", "CodeFirstNamespace", DataSpace.CSpace, payloadImport, null);
-            model.ConceptualModel.Container.AddFunctionImport(functionImport);
-
-            FunctionImportResultMapping functionImportResultMapping = null;
-            FunctionImportMappingNonComposable functionImportMapping = CreateFunctionImportMappingNonComposable(functionImport, function, functionImportResultMapping, model.ConceptualToStoreMapping);
-            model.ConceptualToStoreMapping.AddFunctionImportMapping(functionImportMapping);
         }
 
         #endregion

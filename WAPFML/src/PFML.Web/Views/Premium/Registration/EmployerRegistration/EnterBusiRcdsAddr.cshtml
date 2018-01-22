@@ -1,0 +1,29 @@
+﻿@Html.Partial("WizardHeader", Machine["ListSection"], new ViewDataDictionary(this.ViewData) { { "current", (FACTS.Framework.Lookup.LookupCode)Machine["CurrentSection"] }, { "showHeader", (bool)Machine["ShowHeader"] } })
+
+@using (Form())
+{
+    @using (Panel(stateFilter: "EnterBusiRcdsAddr", panelLayout: PanelLayout.Stacked,borderVisible:false))
+    {
+        @using (Panel(headingText: "Enter Business Records Address", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            <p>Please enter the business records address for this employer. This address cannot be a Post Office box or private mail box. DO NOT: enter a client site, other temporary job site, or employee home address.</p>
+            @SelectBox(labelText: "Same as:", lookupName: LookupTable.AddressType, dataSource: "sameasbusad", blankItemText: "Select One")
+            @TextBox(labelText: "Address Line 1:", formatter: Formatter.TextAlphaNumeric, dataSource: "busadadd1",required: "sameasbusad=null")
+            @TextBox(labelText: "Address Line 2:", formatter: Formatter.TextAlphaNumeric, dataSource: "busadadd2")
+            @TextBox(labelText: "City:", formatter: Formatter.TextAlpha, dataSource: "busadcity", required: "sameasbusad=null")
+            @SelectBox(labelText: "State:", text: LookupTable_State.Washington, lookupName: LookupTable.State, dataSource: "busadstate", required: "sameasbusad=null")
+            @TextBox(labelText: "ZIP/Postal Code:", formatter: Formatter.Postal, dataSource: "busadpostal", required: "sameasbusad=null")
+            @SelectBox(labelText: "Country:", text: LookupTable_Country.UnitedStates, lookupName: LookupTable.Country, dataSource: "busadcountry", required: "sameasbusad=null")
+            @TextBox(labelText: "Phone (Required if U.S. or Canada address):", formatter: Formatter.Phone, dataSource: "busadbusphone", labelColumns: 4, controlColumns: 2, required: "sameasbusad=null")
+            @TextBox(labelText: "ext:", dataSource: "busadbusext", formatter: Formatter.TextNumeric, labelColumns: 1, controlColumns: 1)
+            @TextBox(labelText: "Fax:", formatter: Formatter.TextNumeric, dataSource: "busadfax")
+            @TextBox(labelText: "E-Mail:", formatter: Formatter.Email, dataSource: "busademail")
+            @TextBox(labelText: "Re-Enter E-Mail:", formatter: Formatter.Email, dataSource: "busadreemail")
+        }
+        @using (Panel(borderVisible: false, panelLayout: PanelLayout.Inline, cssClass: "text-center"))
+        {
+            @Button(transition: "Previous")
+            @Button(transition: "Next")
+        }
+    }
+}

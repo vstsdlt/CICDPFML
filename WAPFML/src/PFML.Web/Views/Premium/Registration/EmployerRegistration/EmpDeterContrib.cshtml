@@ -1,0 +1,40 @@
+﻿@Html.Partial("WizardHeader", Machine["ListSection"], new ViewDataDictionary(this.ViewData) { { "current", (FACTS.Framework.Lookup.LookupCode)Machine["CurrentSection"] }, { "showHeader", (bool)Machine["ShowHeader"] } })
+
+@using (Form())
+{
+    @using (Panel(stateFilter: "EmpDeterContrib", panelLayout: PanelLayout.Stacked,borderVisible:false))
+    {
+        @using (Panel(headingText: "Registration Status", defaultControlColumns:4,defaultLabelColumns:4))
+        {
+            <p>This is confirmation of successful registration. Print a copy of this page for your records.</p>
+        }
+        @using (Panel(headingText: "Determination of Employer Status", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            //<p>Effective <b>@Machine["legalname"]</b>, this employer is subject to State Unemployment Compensation (UC) Law. This employer is required to submit quarterly Employment and Wage Detail reports and pay UC taxes on the wages paid to each of its covered employees.</p>
+            <p>Effective <b>@DateTime.Now.ToLongDateString()</b>, this employer is subject to State Unemployment Compensation (UC) Law. This employer is required to submit quarterly Employment and Wage Detail reports and pay UC taxes on the wages paid to each of its covered employees.</p>
+        }
+        @using (Panel(headingText: "UI Employer Account Number", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            @Data(labelText: "Legal Name:", dataSource: "legalname")
+            @Data(labelText: "Doing Business As (DBA) Name:", dataSource: "dbaname")
+            @Data(labelText: "Employer Account Number:", dataSource: "ean")
+            @Data(labelText: "Reporting Type:",text: "Contributory", dataSource: "rtype")
+        }
+        @using (Panel(headingText: "User Name and Password", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            <p>Use the user name and password below to log in to the UI system. After your initial login you will be required to change your password. Select the 'Home' button below to log in.</p>
+            @Data(labelText: "Username:", dataSource: "username")
+        }
+        @using (Panel(headingText: "Quarterly Employment and Wage Detail Report Information", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            <p>This employer is required to submit quarterly Employment and Wage Detail reports. Employment and Wage Detail reports may be submitted using the user name and temporary password received above. Quarterly reports are due by the last day of the month following the end of the quarter. Complete and submit the reports with payments promptly. Interest charges and penalties are mandated by law on overdue contributions.</p>
+            <p>The information provided during registration indicates that an employment and wage detail report is required for the quarter ending <b>@Machine["legalname"]</b> and all subsequent quarters.</p>
+            <p>You must provide information regarding the purchase of a business. You are required to furnish a copy of the purchase agreement, Bill of Sale, or other legal instrument used to document the acquisition. Contact Support Team</p>
+            <p>You indicated that this employer is an out of state employer that is seeking to transfer experience history from another state. Contact Support Team for information on how to complete this transfer.</p>
+        }
+        @using (Panel(borderVisible: false, panelLayout: PanelLayout.Inline, cssClass: "text-center"))
+        {
+            @Button(transition: "Home", cssClass: "text-center")
+        }
+    }
+}

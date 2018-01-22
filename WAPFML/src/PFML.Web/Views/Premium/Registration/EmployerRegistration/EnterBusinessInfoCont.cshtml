@@ -1,0 +1,22 @@
+﻿@Html.Partial("WizardHeader", Machine["ListSection"], new ViewDataDictionary(this.ViewData) { { "current", (FACTS.Framework.Lookup.LookupCode)Machine["CurrentSection"] }, { "showHeader", (bool)Machine["ShowHeader"] } })
+
+@using (Form())
+{
+    @using (Panel(stateFilter: "EnterBusinessInfoCont", panelLayout: PanelLayout.Stacked,borderVisible:false))
+    {
+        @using (Panel(headingText: "Enter Employer Business Information (cont.)", defaultControlColumns: 4, defaultLabelColumns: 4))
+        {
+            @RadioButtonGroup(labelText: "Is this employer a non-profit organization (hospitals, schools, municipalities & counties) that holds an exemption from federal income taxes as described under Section 501(c)(3) of the Internal Revenue Code?", lookupName: LookupTable.BoolYesNo, lookupSort: "{DisplaySortOrder}", dataSource: "peo", required: "true", text: "N")
+            @RadioButtonGroup(labelText: "If yes, is this employer applying for Reimbursable Cost Basis Financing under State 51-1-13?", lookupName: LookupTable.BoolYesNo, lookupSort: "{DisplaySortOrder}", dataSource: "cpeo", required: "true", text: "N")
+            @RadioButtonGroup(labelText: "Did this employer acquire any or all of an employing enterprise currently registered with this agency? (To include assets, inventory and employees)?", lookupName: LookupTable.BoolYesNo, lookupSort: "{DisplaySortOrder}", dataSource: "namc", required: "true", text: "N")
+            @RadioButtonGroup(labelText: "Was a purchase agreement, Bill of Sale or other legal instrument used to document this acquisition? You will be required to furnish a copy of the document prior to completion of transfer:", lookupName: LookupTable.BoolYesNo, lookupSort: "{DisplaySortOrder}", dataSource: "cont", text: "N")
+            @RadioButtonGroup(labelText: "Is there more than one physical location in State?", lookupName: LookupTable.BoolYesNo,lookupSort:"{DisplaySortOrder}", dataSource: "phyloca", required: "true", text: "N")
+            @TextBox(labelText: "If yes, how many?",formatter:Formatter.Number, dataSource: "contt", required: "phyloca='Y'")
+        }
+        @using (Panel(borderVisible: false, panelLayout: PanelLayout.Inline, cssClass: "text-center"))
+        {
+            @Button(transition: "Previous")
+            @Button(transition: "Next")
+        }
+    }
+}

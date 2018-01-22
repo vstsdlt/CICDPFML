@@ -21,12 +21,30 @@ namespace PFML.Shared.LookupTable
         public const string SecurityAccess = "SecurityAccess";
         /// <summary>Lookup name: AddressType</summary>
         public const string AddressType = "AddressType";
+        /// <summary>Lookup name: BankAccountType</summary>
+        public const string BankAccountType = "BankAccountType";
+        /// <summary>Lookup name: BoolYesNo</summary>
+        public const string BoolYesNo = "BoolYesNo";
+        /// <summary>Lookup name: BoolYesNoNA</summary>
+        public const string BoolYesNoNA = "BoolYesNoNA";
+        /// <summary>Lookup name: BusinessType</summary>
+        public const string BusinessType = "BusinessType";
+        /// <summary>Lookup name: CommunicationMethod</summary>
+        public const string CommunicationMethod = "CommunicationMethod";
         /// <summary>Lookup name: Country</summary>
         public const string Country = "Country";
         /// <summary>Lookup name: County</summary>
         public const string County = "County";
+        /// <summary>Lookup name: FormType</summary>
+        public const string FormType = "FormType";
+        /// <summary>Lookup name: LegalEntity</summary>
+        public const string LegalEntity = "LegalEntity";
+        /// <summary>Lookup name: MakePaymentWizardFlow</summary>
+        public const string MakePaymentWizardFlow = "MakePaymentWizardFlow";
         /// <summary>Lookup name: MaritalStatus</summary>
         public const string MaritalStatus = "MaritalStatus";
+        /// <summary>Lookup name: PaymentMethodType</summary>
+        public const string PaymentMethodType = "PaymentMethodType";
         /// <summary>Lookup name: PersonGender</summary>
         public const string PersonGender = "PersonGender";
         /// <summary>Lookup name: PersonStatus</summary>
@@ -35,12 +53,30 @@ namespace PFML.Shared.LookupTable
         public const string PreferredCommunicationMethod = "PreferredCommunicationMethod";
         /// <summary>Lookup name: Prefix</summary>
         public const string Prefix = "Prefix";
+        /// <summary>Lookup name: Quarter</summary>
+        public const string Quarter = "Quarter";
         /// <summary>Lookup name: State</summary>
         public const string State = "State";
         /// <summary>Lookup name: Suffix</summary>
         public const string Suffix = "Suffix";
         /// <summary>Lookup name: ValidationType</summary>
         public const string ValidationType = "ValidationType";
+        /// <summary>Lookup name: WageDetailAdjReasonCode</summary>
+        public const string WageDetailAdjReasonCode = "WageDetailAdjReasonCode";
+        /// <summary>Lookup name: WageDetailFilingMethod</summary>
+        public const string WageDetailFilingMethod = "WageDetailFilingMethod";
+        /// <summary>Lookup name: WageDetailUnitYears</summary>
+        public const string WageDetailUnitYears = "WageDetailUnitYears";
+        /// <summary>Lookup name: WaiverLeaveType</summary>
+        public const string WaiverLeaveType = "WaiverLeaveType";
+        /// <summary>Lookup name: WaiverRequestStatus</summary>
+        public const string WaiverRequestStatus = "WaiverRequestStatus";
+        /// <summary>Lookup name: WaiverWeeksAvailable</summary>
+        public const string WaiverWeeksAvailable = "WaiverWeeksAvailable";
+        /// <summary>Lookup name: WizEmployerRegistration</summary>
+        public const string WizEmployerRegistration = "WizEmployerRegistration";
+        /// <summary>Lookup name: WizEmployerWageFiling</summary>
+        public const string WizEmployerWageFiling = "WizEmployerWageFiling";
     }
 
     /// <summary>Table of lookup codes for: SecurityPermissionType
@@ -82,11 +118,99 @@ namespace PFML.Shared.LookupTable
     {
         /// <summary>Lookup code: HM</summary>
         public const string MailingAddress = "HM";
+        /// <summary>Lookup code: MAIL</summary>
+        public const string Mailing = "MAIL";
+        /// <summary>Lookup code: PHYS</summary>
+        public const string Physical = "PHYS";
     }
 
     /// <summary>Table of lookup properties for: AddressType
     public static class LookupTable_AddressType_Properties
     {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
+    }
+
+    /// <summary>Table of lookup codes for: BankAccountType
+    public static class LookupTable_BankAccountType
+    {
+        /// <summary>Lookup code: CHEK</summary>
+        public const string Checking = "CHEK";
+        /// <summary>Lookup code: SAVN</summary>
+        public const string Savings = "SAVN";
+    }
+
+    /// <summary>Table of lookup properties for: BankAccountType
+    public static class LookupTable_BankAccountType_Properties
+    {
+    }
+
+    /// <summary>Table of lookup codes for: BoolYesNo
+    public static class LookupTable_BoolYesNo
+    {
+        /// <summary>Lookup code: N</summary>
+        public const string No = "N";
+        /// <summary>Lookup code: Y</summary>
+        public const string Yes = "Y";
+    }
+
+    /// <summary>Table of lookup properties for: BoolYesNo
+    public static class LookupTable_BoolYesNo_Properties
+    {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
+    }
+
+    /// <summary>Table of lookup codes for: BoolYesNoNA
+    public static class LookupTable_BoolYesNoNA
+    {
+        /// <summary>Lookup code: N</summary>
+        public const string No = "N";
+        /// <summary>Lookup code: NA</summary>
+        public const string No_2 = "NA";
+        /// <summary>Lookup code: Y</summary>
+        public const string Yes = "Y";
+    }
+
+    /// <summary>Table of lookup properties for: BoolYesNoNA
+    public static class LookupTable_BoolYesNoNA_Properties
+    {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
+    }
+
+    /// <summary>Table of lookup codes for: BusinessType
+    public static class LookupTable_BusinessType
+    {
+        /// <summary>Lookup code: AGRE</summary>
+        public const string Agricultural = "AGRE";
+        /// <summary>Lookup code: DOME</summary>
+        public const string Domestic = "DOME";
+        /// <summary>Lookup code: NAGR</summary>
+        public const string NonAgriculturalRegularEmployment = "NAGR";
+    }
+
+    /// <summary>Table of lookup properties for: BusinessType
+    public static class LookupTable_BusinessType_Properties
+    {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
+    }
+
+    /// <summary>Table of lookup codes for: CommunicationMethod
+    public static class LookupTable_CommunicationMethod
+    {
+        /// <summary>Lookup code: ELEC</summary>
+        public const string Email = "ELEC";
+        /// <summary>Lookup code: PAPR</summary>
+        public const string USMail = "PAPR";
+    }
+
+    /// <summary>Table of lookup properties for: CommunicationMethod
+    public static class LookupTable_CommunicationMethod_Properties
+    {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
     }
 
     /// <summary>Table of lookup codes for: Country
@@ -813,6 +937,76 @@ namespace PFML.Shared.LookupTable
         public const string CodeCategory = "CodeCategory";
     }
 
+    /// <summary>Table of lookup codes for: FormType
+    public static class LookupTable_FormType
+    {
+        /// <summary>Lookup code: FTVPW</summary>
+        public const string VPWaiverForm = "FTVPW";
+    }
+
+    /// <summary>Table of lookup properties for: FormType
+    public static class LookupTable_FormType_Properties
+    {
+    }
+
+    /// <summary>Table of lookup codes for: LegalEntity
+    public static class LookupTable_LegalEntity
+    {
+        /// <summary>Lookup code: ASTN</summary>
+        public const string Association = "ASTN";
+        /// <summary>Lookup code: CITY</summary>
+        public const string City = "CITY";
+        /// <summary>Lookup code: CNTY</summary>
+        public const string County = "CNTY";
+        /// <summary>Lookup code: CORP</summary>
+        public const string Corporation = "CORP";
+        /// <summary>Lookup code: GOVT</summary>
+        public const string GovernmentStateAgency = "GOVT";
+        /// <summary>Lookup code: GPTR</summary>
+        public const string GeneralPartnership = "GPTR";
+        /// <summary>Lookup code: LLBC</summary>
+        public const string LimitedLiabilityCompany = "LLBC";
+        /// <summary>Lookup code: LLBP</summary>
+        public const string LimitedLiabilityPartnershipLLP = "LLBP";
+        /// <summary>Lookup code: MLTY</summary>
+        public const string USMilitary = "MLTY";
+        /// <summary>Lookup code: PBLC</summary>
+        public const string LocalPublicBody = "PBLC";
+        /// <summary>Lookup code: SOLP</summary>
+        public const string SoleProprietor = "SOLP";
+        /// <summary>Lookup code: TRBP</summary>
+        public const string IndianTribePuebloGovernment = "TRBP";
+        /// <summary>Lookup code: TRST</summary>
+        public const string Trust = "TRST";
+    }
+
+    /// <summary>Table of lookup properties for: LegalEntity
+    public static class LookupTable_LegalEntity_Properties
+    {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
+    }
+
+    /// <summary>Table of lookup codes for: MakePaymentWizardFlow
+    public static class LookupTable_MakePaymentWizardFlow
+    {
+        /// <summary>Lookup code: Complete</summary>
+        public const string Complete = "Complete";
+        /// <summary>Lookup code: Review Balance</summary>
+        public const string ReviewBalance = "Review Balance";
+        /// <summary>Lookup code: Select Pmt Method</summary>
+        public const string SelectPaymentMethod = "Select Pmt Method";
+        /// <summary>Lookup code: Submit Pmt Details</summary>
+        public const string SubmitPaymentDetails = "Submit Pmt Details";
+    }
+
+    /// <summary>Table of lookup properties for: MakePaymentWizardFlow
+    public static class LookupTable_MakePaymentWizardFlow_Properties
+    {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
+    }
+
     /// <summary>Table of lookup codes for: MaritalStatus
     public static class LookupTable_MaritalStatus
     {
@@ -833,6 +1027,20 @@ namespace PFML.Shared.LookupTable
     {
         /// <summary>Lookup property: CodeCategory</summary>
         public const string CodeCategory = "CodeCategory";
+    }
+
+    /// <summary>Table of lookup codes for: PaymentMethodType
+    public static class LookupTable_PaymentMethodType
+    {
+        /// <summary>Lookup code: ACHD</summary>
+        public const string ACHDebit = "ACHD";
+        /// <summary>Lookup code: PCHK</summary>
+        public const string PaperVoucher = "PCHK";
+    }
+
+    /// <summary>Table of lookup properties for: PaymentMethodType
+    public static class LookupTable_PaymentMethodType_Properties
+    {
     }
 
     /// <summary>Table of lookup codes for: PersonGender
@@ -901,6 +1109,26 @@ namespace PFML.Shared.LookupTable
     /// <summary>Table of lookup properties for: Prefix
     public static class LookupTable_Prefix_Properties
     {
+    }
+
+    /// <summary>Table of lookup codes for: Quarter
+    public static class LookupTable_Quarter
+    {
+        /// <summary>Lookup code: Q1</summary>
+        public const string JanuaryFebruaryMarchQ1 = "Q1";
+        /// <summary>Lookup code: Q2</summary>
+        public const string AprilMayJuneQ2 = "Q2";
+        /// <summary>Lookup code: Q3</summary>
+        public const string JulyAugustSeptemberQ3 = "Q3";
+        /// <summary>Lookup code: Q4</summary>
+        public const string OctoberNovemberDecemberQ4 = "Q4";
+    }
+
+    /// <summary>Table of lookup properties for: Quarter
+    public static class LookupTable_Quarter_Properties
+    {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
     }
 
     /// <summary>Table of lookup codes for: State
@@ -1081,6 +1309,158 @@ namespace PFML.Shared.LookupTable
     /// <summary>Table of lookup properties for: ValidationType
     public static class LookupTable_ValidationType_Properties
     {
+    }
+
+    /// <summary>Table of lookup codes for: WageDetailAdjReasonCode
+    public static class LookupTable_WageDetailAdjReasonCode
+    {
+        /// <summary>Lookup code: Orig</summary>
+        public const string Original = "Orig";
+    }
+
+    /// <summary>Table of lookup properties for: WageDetailAdjReasonCode
+    public static class LookupTable_WageDetailAdjReasonCode_Properties
+    {
+    }
+
+    /// <summary>Table of lookup codes for: WageDetailFilingMethod
+    public static class LookupTable_WageDetailFilingMethod
+    {
+        /// <summary>Lookup code: Copy</summary>
+        public const string CopyfromPreviousQuarter = "Copy";
+        /// <summary>Lookup code: Manu</summary>
+        public const string ManualEntry = "Manu";
+        /// <summary>Lookup code: NEmp</summary>
+        public const string NoEmploymentandNoWage = "NEmp";
+        /// <summary>Lookup code: Upld</summary>
+        public const string FileUpload = "Upld";
+    }
+
+    /// <summary>Table of lookup properties for: WageDetailFilingMethod
+    public static class LookupTable_WageDetailFilingMethod_Properties
+    {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
+    }
+
+    /// <summary>Table of lookup codes for: WageDetailUnitYears
+    public static class LookupTable_WageDetailUnitYears
+    {
+        /// <summary>Lookup code: 4</summary>
+        public const string Yearsforwagefiling = "4";
+    }
+
+    /// <summary>Table of lookup properties for: WageDetailUnitYears
+    public static class LookupTable_WageDetailUnitYears_Properties
+    {
+    }
+
+    /// <summary>Table of lookup codes for: WaiverLeaveType
+    public static class LookupTable_WaiverLeaveType
+    {
+        /// <summary>Lookup code: WLTCar</summary>
+        public const string Caregiver = "WLTCar";
+        /// <summary>Lookup code: WLTMed</summary>
+        public const string Medical = "WLTMed";
+        /// <summary>Lookup code: WLTPaa</summary>
+        public const string PaternityAdoption = "WLTPaa";
+        /// <summary>Lookup code: WLTPab</summary>
+        public const string PaternityBirthFather = "WLTPab";
+    }
+
+    /// <summary>Table of lookup properties for: WaiverLeaveType
+    public static class LookupTable_WaiverLeaveType_Properties
+    {
+    }
+
+    /// <summary>Table of lookup codes for: WaiverRequestStatus
+    public static class LookupTable_WaiverRequestStatus
+    {
+        /// <summary>Lookup code: WRSApr</summary>
+        public const string Approved = "WRSApr";
+        /// <summary>Lookup code: WRSDen</summary>
+        public const string Denied = "WRSDen";
+        /// <summary>Lookup code: WRSRev</summary>
+        public const string ReviewinProgress = "WRSRev";
+        /// <summary>Lookup code: WRSSad</summary>
+        public const string SavedasDraft = "WRSSad";
+        /// <summary>Lookup code: WRSSub</summary>
+        public const string SubmittedforPayment = "WRSSub";
+    }
+
+    /// <summary>Table of lookup properties for: WaiverRequestStatus
+    public static class LookupTable_WaiverRequestStatus_Properties
+    {
+    }
+
+    /// <summary>Table of lookup codes for: WaiverWeeksAvailable
+    public static class LookupTable_WaiverWeeksAvailable
+    {
+        /// <summary>Lookup code: WWAA</summary>
+        public const string _1Week = "WWAA";
+        /// <summary>Lookup code: WWAB</summary>
+        public const string _2Weeks = "WWAB";
+        /// <summary>Lookup code: WWAC</summary>
+        public const string _3Weeks = "WWAC";
+        /// <summary>Lookup code: WWAD</summary>
+        public const string _4Weeks = "WWAD";
+        /// <summary>Lookup code: WWAE</summary>
+        public const string _5Weeks = "WWAE";
+        /// <summary>Lookup code: WWAF</summary>
+        public const string _6Weeks = "WWAF";
+        /// <summary>Lookup code: WWAG</summary>
+        public const string _7Weeks = "WWAG";
+        /// <summary>Lookup code: WWAH</summary>
+        public const string _8Weeks = "WWAH";
+    }
+
+    /// <summary>Table of lookup properties for: WaiverWeeksAvailable
+    public static class LookupTable_WaiverWeeksAvailable_Properties
+    {
+    }
+
+    /// <summary>Table of lookup codes for: WizEmployerRegistration
+    public static class LookupTable_WizEmployerRegistration
+    {
+        /// <summary>Lookup code: Complete</summary>
+        public const string Complete = "Complete";
+        /// <summary>Lookup code: EntBusInfo</summary>
+        public const string EnterBusinessInformation = "EntBusInfo";
+        /// <summary>Lookup code: EntEmpInfo</summary>
+        public const string EnterEmployerInformation = "EntEmpInfo";
+        /// <summary>Lookup code: EntLblInfo</summary>
+        public const string EnterLiabilityInformation = "EntLblInfo";
+        /// <summary>Lookup code: EntUsers</summary>
+        public const string EnterUsers = "EntUsers";
+        /// <summary>Lookup code: Summary</summary>
+        public const string Summary = "Summary";
+    }
+
+    /// <summary>Table of lookup properties for: WizEmployerRegistration
+    public static class LookupTable_WizEmployerRegistration_Properties
+    {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
+    }
+
+    /// <summary>Table of lookup codes for: WizEmployerWageFiling
+    public static class LookupTable_WizEmployerWageFiling
+    {
+        /// <summary>Lookup code: CnfrmSub</summary>
+        public const string ConfirmSubmission = "CnfrmSub";
+        /// <summary>Lookup code: PrcAndCalc</summary>
+        public const string ProcessandCalculate = "PrcAndCalc";
+        /// <summary>Lookup code: SelFilMthd</summary>
+        public const string SelectFilingMethod = "SelFilMthd";
+        /// <summary>Lookup code: SubWgInfo</summary>
+        public const string SubmitWageInformation = "SubWgInfo";
+    }
+
+    /// <summary>Table of lookup properties for: WizEmployerWageFiling
+    public static class LookupTable_WizEmployerWageFiling_Properties
+    {
+        /// <summary>Lookup property: DisplaySortOrder : To manipulate sort order</summary>
+        public const string DisplaySortOrder = "DisplaySortOrder";
     }
 
 }

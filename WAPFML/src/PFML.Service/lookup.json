@@ -41,7 +41,7 @@
         [ "READ", "Read" ],
         [ "FULL", "Full" ]
       ]
-    },
+    }
 
     //"state": {
     //    "name": "State",

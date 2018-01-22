@@ -64,9 +64,249 @@
         "Display": "Mailing Address",
         "Description": "Mailing Address",
         "lookupValues": {}
+      },
+      "MAIL": {
+        "Code": "MAIL",
+        "Display": "Mailing",
+        "Description": "Mailing",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      },
+      "PHYS": {
+        "Code": "PHYS",
+        "Display": "Physical",
+        "Description": "Physical",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
+  },
+  "BankAccountType": {
+    "Name": "BankAccountType",
+    "Description": "Bank Account Type",
+    "lookupCodes": {
+      "CHEK": {
+        "Code": "CHEK",
+        "Display": "Checking",
+        "Description": "Checking Account",
+        "lookupValues": {}
+      },
+      "SAVN": {
+        "Code": "SAVN",
+        "Display": "Savings",
+        "Description": "Savings Account",
+        "lookupValues": {}
       }
     },
     "lookupProperties": {}
+  },
+  "BoolYesNo": {
+    "Name": "BoolYesNo",
+    "Description": "Yes No Dictionary",
+    "lookupCodes": {
+      "N": {
+        "Code": "N",
+        "Display": "No",
+        "Description": "No",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      },
+      "Y": {
+        "Code": "Y",
+        "Display": "Yes",
+        "Description": "Yes",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
+  },
+  "BoolYesNoNA": {
+    "Name": "BoolYesNoNA",
+    "Description": "Yes No Dictionary",
+    "lookupCodes": {
+      "N": {
+        "Code": "N",
+        "Display": "No",
+        "Description": "No",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      },
+      "NA": {
+        "Code": "NA",
+        "Display": "No",
+        "Description": "No",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "3"
+          }
+        }
+      },
+      "Y": {
+        "Code": "Y",
+        "Display": "Yes",
+        "Description": "Yes",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
+  },
+  "BusinessType": {
+    "Name": "BusinessType",
+    "Description": "Business Type",
+    "lookupCodes": {
+      "AGRE": {
+        "Code": "AGRE",
+        "Display": "Agricultural",
+        "Description": "Agricultural",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      },
+      "DOME": {
+        "Code": "DOME",
+        "Display": "Domestic",
+        "Description": "Domestic",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "3"
+          }
+        }
+      },
+      "NAGR": {
+        "Code": "NAGR",
+        "Display": "Non-Agricultural (Regular) Employment",
+        "Description": "Non-Agricultural (Regular) Employment",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
+  },
+  "CommunicationMethod": {
+    "Name": "CommunicationMethod",
+    "Description": "Communication Method",
+    "lookupCodes": {
+      "ELEC": {
+        "Code": "ELEC",
+        "Display": "Email",
+        "Description": "Email",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      },
+      "PAPR": {
+        "Code": "PAPR",
+        "Display": "US Mail",
+        "Description": "US Mail",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
   },
   "Country": {
     "Name": "Country",
@@ -4992,6 +5232,281 @@
       }
     }
   },
+  "FormType": {
+    "Name": "FormType",
+    "Description": "FormType",
+    "lookupCodes": {
+      "FTVPW": {
+        "Code": "FTVPW",
+        "Display": "VP Waiver Form",
+        "Description": "VP Waiver Form",
+        "lookupValues": {}
+      }
+    },
+    "lookupProperties": {}
+  },
+  "LegalEntity": {
+    "Name": "LegalEntity",
+    "Description": "Legal Entity",
+    "lookupCodes": {
+      "ASTN": {
+        "Code": "ASTN",
+        "Display": "Association",
+        "Description": "Association",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      },
+      "CITY": {
+        "Code": "CITY",
+        "Display": "City",
+        "Description": "City",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "9"
+          }
+        }
+      },
+      "CNTY": {
+        "Code": "CNTY",
+        "Display": "County",
+        "Description": "County",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "10"
+          }
+        }
+      },
+      "CORP": {
+        "Code": "CORP",
+        "Display": "Corporation",
+        "Description": "Corporation",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "4"
+          }
+        }
+      },
+      "GOVT": {
+        "Code": "GOVT",
+        "Display": "Government (State Agency)",
+        "Description": "Government (State Agency)",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "8"
+          }
+        }
+      },
+      "GPTR": {
+        "Code": "GPTR",
+        "Display": "General Partnership",
+        "Description": "General Partnership",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "3"
+          }
+        }
+      },
+      "LLBC": {
+        "Code": "LLBC",
+        "Display": "Limited Liability Company",
+        "Description": "Limited Liability Company",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "5"
+          }
+        }
+      },
+      "LLBP": {
+        "Code": "LLBP",
+        "Display": "Limited Liability Partnership (LLP)",
+        "Description": "Limited Liability Partnership (LLP)",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "6"
+          }
+        }
+      },
+      "MLTY": {
+        "Code": "MLTY",
+        "Display": "US Military",
+        "Description": "US Military",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "12"
+          }
+        }
+      },
+      "PBLC": {
+        "Code": "PBLC",
+        "Display": "Local Public Body",
+        "Description": "Local Public Body",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "11"
+          }
+        }
+      },
+      "SOLP": {
+        "Code": "SOLP",
+        "Display": "Sole Proprietor",
+        "Description": "Sole Proprietor",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      },
+      "TRBP": {
+        "Code": "TRBP",
+        "Display": "Indian Tribe/Pueblo Government",
+        "Description": "Indian Tribe/Pueblo Government",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "7"
+          }
+        }
+      },
+      "TRST": {
+        "Code": "TRST",
+        "Display": "Trust",
+        "Description": "Trust",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "13"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
+  },
+  "MakePaymentWizardFlow": {
+    "Name": "MakePaymentWizardFlow",
+    "Description": "Make Payment Wizard Flow",
+    "lookupCodes": {
+      "Complete": {
+        "Code": "Complete",
+        "Display": "Complete",
+        "Description": "Complete",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "4"
+          }
+        }
+      },
+      "Review Balance": {
+        "Code": "Review Balance",
+        "Display": "Review Balance",
+        "Description": "Review Balance",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      },
+      "Select Pmt Method": {
+        "Code": "Select Pmt Method",
+        "Display": "Select Payment Method",
+        "Description": "Select Payment Method",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      },
+      "Submit Pmt Details": {
+        "Code": "Submit Pmt Details",
+        "Display": "Submit Payment Details",
+        "Description": "Submit Payment Details",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "3"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
+  },
   "MaritalStatus": {
     "Name": "MaritalStatus",
     "Description": "MaritalStatus",
@@ -5073,6 +5588,25 @@
         "Description": null
       }
     }
+  },
+  "PaymentMethodType": {
+    "Name": "PaymentMethodType",
+    "Description": "Payment Method Type",
+    "lookupCodes": {
+      "ACHD": {
+        "Code": "ACHD",
+        "Display": "ACH Debit",
+        "Description": "ACH Debit",
+        "lookupValues": {}
+      },
+      "PCHK": {
+        "Code": "PCHK",
+        "Display": "Paper Voucher",
+        "Description": "Paper Voucher",
+        "lookupValues": {}
+      }
+    },
+    "lookupProperties": {}
   },
   "PersonGender": {
     "Name": "PersonGender",
@@ -5216,6 +5750,74 @@
       }
     },
     "lookupProperties": {}
+  },
+  "Quarter": {
+    "Name": "Quarter",
+    "Description": "Quarter",
+    "lookupCodes": {
+      "Q1": {
+        "Code": "Q1",
+        "Display": "January, February, March (Q1)",
+        "Description": "January, February, March (Q1)",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      },
+      "Q2": {
+        "Code": "Q2",
+        "Display": "April, May, June (Q2)",
+        "Description": "April, May, June (Q2)",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      },
+      "Q3": {
+        "Code": "Q3",
+        "Display": "July, August, September (Q3)",
+        "Description": "July, August, September (Q3)",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      },
+      "Q4": {
+        "Code": "Q4",
+        "Display": "October, November, December (Q4)",
+        "Description": "October, November, December (Q4)",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
   },
   "State": {
     "Name": "State",
@@ -6182,5 +6784,386 @@
       }
     },
     "lookupProperties": {}
+  },
+  "WageDetailAdjReasonCode": {
+    "Name": "WageDetailAdjReasonCode",
+    "Description": "Wage detail Sumission Type",
+    "lookupCodes": {
+      "Orig": {
+        "Code": "Orig",
+        "Display": "Original",
+        "Description": "Original Submission",
+        "lookupValues": {}
+      }
+    },
+    "lookupProperties": {}
+  },
+  "WageDetailFilingMethod": {
+    "Name": "WageDetailFilingMethod",
+    "Description": "Wage Detail Filing Method",
+    "lookupCodes": {
+      "Copy": {
+        "Code": "Copy",
+        "Display": "Copy from Previous Quarter",
+        "Description": "Copy from Previous Quarter – Modify previous quarter data",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      },
+      "Manu": {
+        "Code": "Manu",
+        "Display": "Manual Entry",
+        "Description": "Manual Entry – Enter individual wage records manually online",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "3"
+          }
+        }
+      },
+      "NEmp": {
+        "Code": "NEmp",
+        "Display": "No Employment and No Wage",
+        "Description": "No Employment and No Wage – No employment and no wages paid in quarter",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "4"
+          }
+        }
+      },
+      "Upld": {
+        "Code": "Upld",
+        "Display": "File Upload",
+        "Description": "File Upload – Attach electronic wage file",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
+  },
+  "WageDetailUnitYears": {
+    "Name": "WageDetailUnitYears",
+    "Description": "Years for wage filing",
+    "lookupCodes": {
+      "4": {
+        "Code": "4",
+        "Display": "Years for wage filing",
+        "Description": "Years for wage filing",
+        "lookupValues": {}
+      }
+    },
+    "lookupProperties": {}
+  },
+  "WaiverLeaveType": {
+    "Name": "WaiverLeaveType",
+    "Description": "WaiverLeaveType",
+    "lookupCodes": {
+      "WLTCar": {
+        "Code": "WLTCar",
+        "Display": "Caregiver",
+        "Description": "Caregiver",
+        "lookupValues": {}
+      },
+      "WLTMed": {
+        "Code": "WLTMed",
+        "Display": "Medical",
+        "Description": "Medical",
+        "lookupValues": {}
+      },
+      "WLTPaa": {
+        "Code": "WLTPaa",
+        "Display": "Paternity Adoption",
+        "Description": "Paternity - Adoption",
+        "lookupValues": {}
+      },
+      "WLTPab": {
+        "Code": "WLTPab",
+        "Display": "Paternity Birth Father",
+        "Description": "Paternity - Birth Father",
+        "lookupValues": {}
+      }
+    },
+    "lookupProperties": {}
+  },
+  "WaiverRequestStatus": {
+    "Name": "WaiverRequestStatus",
+    "Description": "WaiverRequestStatus",
+    "lookupCodes": {
+      "WRSApr": {
+        "Code": "WRSApr",
+        "Display": "Approved",
+        "Description": "Approved",
+        "lookupValues": {}
+      },
+      "WRSDen": {
+        "Code": "WRSDen",
+        "Display": "Denied",
+        "Description": "Denied",
+        "lookupValues": {}
+      },
+      "WRSRev": {
+        "Code": "WRSRev",
+        "Display": "Review in Progress",
+        "Description": "Review in Progress",
+        "lookupValues": {}
+      },
+      "WRSSad": {
+        "Code": "WRSSad",
+        "Display": "Saved as Draft",
+        "Description": "Saved as Draft",
+        "lookupValues": {}
+      },
+      "WRSSub": {
+        "Code": "WRSSub",
+        "Display": "Submitted for Payment",
+        "Description": "Submitted for Payment",
+        "lookupValues": {}
+      }
+    },
+    "lookupProperties": {}
+  },
+  "WaiverWeeksAvailable": {
+    "Name": "WaiverWeeksAvailable",
+    "Description": "WaiverWeeksAvailable",
+    "lookupCodes": {
+      "WWAA": {
+        "Code": "WWAA",
+        "Display": "1 Week",
+        "Description": "1 Week",
+        "lookupValues": {}
+      },
+      "WWAB": {
+        "Code": "WWAB",
+        "Display": "2 Weeks",
+        "Description": "2 Weeks",
+        "lookupValues": {}
+      },
+      "WWAC": {
+        "Code": "WWAC",
+        "Display": "3 Weeks",
+        "Description": "3 Weeks",
+        "lookupValues": {}
+      },
+      "WWAD": {
+        "Code": "WWAD",
+        "Display": "4 Weeks",
+        "Description": "4 Weeks",
+        "lookupValues": {}
+      },
+      "WWAE": {
+        "Code": "WWAE",
+        "Display": "5 Weeks",
+        "Description": "5 Weeks",
+        "lookupValues": {}
+      },
+      "WWAF": {
+        "Code": "WWAF",
+        "Display": "6 Weeks",
+        "Description": "6 Weeks",
+        "lookupValues": {}
+      },
+      "WWAG": {
+        "Code": "WWAG",
+        "Display": "7 Weeks",
+        "Description": "7 Weeks",
+        "lookupValues": {}
+      },
+      "WWAH": {
+        "Code": "WWAH",
+        "Display": "8 Weeks",
+        "Description": "8 Weeks",
+        "lookupValues": {}
+      }
+    },
+    "lookupProperties": {}
+  },
+  "WizEmployerRegistration": {
+    "Name": "WizEmployerRegistration",
+    "Description": "Employer Registration Wizard",
+    "lookupCodes": {
+      "Complete": {
+        "Code": "Complete",
+        "Display": "Complete",
+        "Description": "Complete",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "6"
+          }
+        }
+      },
+      "EntBusInfo": {
+        "Code": "EntBusInfo",
+        "Display": "Enter Business Information",
+        "Description": "Enter Business Information",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "4"
+          }
+        }
+      },
+      "EntEmpInfo": {
+        "Code": "EntEmpInfo",
+        "Display": "Enter Employer Information",
+        "Description": "Enter Employer Information",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "3"
+          }
+        }
+      },
+      "EntLblInfo": {
+        "Code": "EntLblInfo",
+        "Display": "Enter Liability Information",
+        "Description": "Enter Liability Information",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      },
+      "EntUsers": {
+        "Code": "EntUsers",
+        "Display": "Enter Users",
+        "Description": "Enter Users",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      },
+      "Summary": {
+        "Code": "Summary",
+        "Display": "Summary",
+        "Description": "Summary",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "5"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
+  },
+  "WizEmployerWageFiling": {
+    "Name": "WizEmployerWageFiling",
+    "Description": "Employer Wage Filing Wizard",
+    "lookupCodes": {
+      "CnfrmSub": {
+        "Code": "CnfrmSub",
+        "Display": "Confirm Submission",
+        "Description": "Confirm Submission",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "3"
+          }
+        }
+      },
+      "PrcAndCalc": {
+        "Code": "PrcAndCalc",
+        "Display": "Process and Calculate",
+        "Description": "Process and Calculate",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "4"
+          }
+        }
+      },
+      "SelFilMthd": {
+        "Code": "SelFilMthd",
+        "Display": "Select Filing Method",
+        "Description": "Select Filing Method",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "1"
+          }
+        }
+      },
+      "SubWgInfo": {
+        "Code": "SubWgInfo",
+        "Display": "Submit Wage Information",
+        "Description": "Submit Wage Information",
+        "lookupValues": {
+          "DisplaySortOrder": {
+            "LookupProperty": {
+              "Property": "DisplaySortOrder",
+              "Description": "To manipulate sort order"
+            },
+            "Value": "2"
+          }
+        }
+      }
+    },
+    "lookupProperties": {
+      "DisplaySortOrder": {
+        "Property": "DisplaySortOrder",
+        "Description": "To manipulate sort order"
+      }
+    }
   }
 }
