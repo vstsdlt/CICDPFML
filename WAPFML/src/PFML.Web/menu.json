@@ -1,149 +1,23 @@
 ﻿[
-    {
-        "Description": "Home",
-        "DisplayText": "FACTS Home",
-        "GlyphIcon": "fa fa-lg fa-fw fa-home",
-        "TargetMachine": "Home"
-    },
-    {
-        "Description": "Member",
-        "DisplayText": "Member",
-        "GlyphIcon": "fa fa-lg fa-fw fa-bar-chart-o",
-        "Children": [
-									{
-										"Description": "Member Profile",
-										"DisplayText": "Member Profile",
-										"GlyphIcon": "fa fa-lg fa-fw fa-table",
-										"TargetMachine": "sample.revenue.search.employersearch"
-									},
-            {
-                "Description": "Member Maintenance Sub Menu",
-                "DisplayText": "Maintenance",
-                "GlyphIcon": "fa fa-plane",
-                "Children": [
-                    {
-                        "Description": "Member Maintenance Person View",
-                        "DisplayText": "Person",
-                        "GlyphIcon": "fa fa-flag",
-                        "TargetMachine": "Member.Maintenance.Person"
-                    },
-                    {
-                        "Description": "Member Maintenance Membership View",
-                        "DisplayText": "Membership",
-                        "GlyphIcon": "fa fa-flag",
-                        "TargetMachine": "Member.Maintenance.Membership"
-                    }
-                ]
-            },
-            {
-                "Description": "Member Benefits Sub Menu",
-                "DisplayText": "Benefits",
-                "GlyphIcon": "fa fa-plane",
-                "Children": [
-                    {
-                        "Description": "Member Benefits Estimate View",
-                        "DisplayText": "Estimate",
-                        "GlyphIcon": "fa fa-lg fa-fw fa-bar-chart-o",
-                        "TargetMachine": "Member.Benefits.Estimate"
-                    },
-                    {
-                        "Description": "Member Benefits Retirement View",
-                        "DisplayText": "Retirement",
-                        "GlyphIcon": "fa fa-lg fa-fw fa-bar-chart-o",
-                        "TargetMachine": "Member.Benefits.Retirement"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Description": "Retiree Sub Menu",
-        "DisplayText": "Retiree",
-        "GlyphIcon": "fa fa-flag",
-        "Children": [
-            {
-                "Description": "Retiree Profile",
-                "DisplayText": "Retiree Profile",
-                "GlyphIcon": "fa fa-lg fa-fw fa-table",
-                "TargetMachine": "Retiree.MemberProfile"
-            },
-            {
-                "Description": "Retiree Maintenance Sub Menu",
-                "DisplayText": "Maintenance",
-                "GlyphIcon": "fa fa-plane",
-                "Children": [
-                    {
-                        "Description": "Retiree Maintenance Person View",
-                        "DisplayText": "Person",
-                        "GlyphIcon": "fa fa-flag",
-                        "TargetMachine": "Retiree.Maintenance.Person"
-                    },
-                    {
-                        "Description": "Retiree Maintenance Benefit Account View",
-                        "DisplayText": "Benefit Account",
-                        "GlyphIcon": "fa fa-flag",
-                        "TargetMachine": "Retiree.Maintenance.BenefitAccount"
-                    }
-                ]
-            },
-            {
-                "Description": "Retiree Benefits Sub Menu",
-                "DisplayText": "Payment Cancellation",
-                "GlyphIcon": "fa fa-plane",
-                "Children": [
-                    {
-                        "Description": "Retiree Schedule View",
-                        "DisplayText": "Schedule",
-                        "GlyphIcon": "fa fa-lg fa-fw fa-bar-chart-o",
-                        "TargetMachine": "Retiree.Benefits.Schedule"
-                    },
-                    {
-                        "Description": "Retiree Benefits Payroll View",
-                        "DisplayText": "Payroll",
-                        "GlyphIcon": "fa fa-lg fa-fw fa-bar-chart-o",
-                        "TargetMachine": "Retiree.Benefits.Payroll"
-                    },
-                    {
-                        "Description": "Retiree Benefits COLA View",
-                        "DisplayText": "COLA",
-                        "GlyphIcon": "fa fa-lg fa-fw fa-bar-chart-o",
-                        "TargetMachine": "Retiree.Benefits.Cola"
-                    },
-                    {
-                        "Description": "Retiree Benefits Supplemental",
-                        "DisplayText": "Supplemental",
-                        "GlyphIcon": "fa fa-lg fa-fw fa-bar-chart-o",
-                        "Children": [
-                            {
-                                "Description": "Retiree Benefits Supplemental Request",
-                                "DisplayText": "Request",
-                                "GlyphIcon": "fa fa-lg fa-fw fa-bar-chart-o",
-                                "TargetMachine": "Retiree.Benefits.Supplemental.Request"
-                            },
-                            {
-                                "Description": "Retiree Benefits Supplemental Approve",
-                                "DisplayText": "Approve",
-                                "GlyphIcon": "fa fa-lg fa-fw fa-bar-chart-o",
-                                "TargetMachine": "Retiree.Benefits.Supplemental.Approve"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "Description": "About Us",
-        "DisplayText": "About Us",
-        "GlyphIcon": "fa fa-lg fa-fw fa-home",
-        "Children": [
-            {
-                "Description": "Control Library Test",
-                "DisplayText": "Control Library Test",
-                "GlyphIcon": "fa fa-lg fa-fw fa-table",
-                "TargetMachine": "ControlLibraryTest"
-            }
-        ]
-
-    }
+		{
+				"Description": "Home",
+				"DisplayText": "PFML Home",
+				"TargetMachine": "Core.Blank"
+		},
+		{
+			"Description": "Employer",
+			"DisplayText": "Employer",
+      "Children": [
+        {
+          "Description": "Employer Registration",
+          "DisplayText": "Employer Registration",
+          "TargetMachine": "Premium.Registration.EmployerRegistration"
+        },
+        {
+          "Description": "Voluntary Plan Waiver",
+          "DisplayText": "Voluntary Plan Waiver",
+          "TargetMachine": "Premium.Waiver.VPRequest"
+        }
+      ]
+		}
 ]

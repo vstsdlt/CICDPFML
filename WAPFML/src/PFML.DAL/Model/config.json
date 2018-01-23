@@ -11,6 +11,8 @@
         "updateUser": [ "UpdateUserId" ],
         "updateTimestamp": [ "UpdateDateTime" ],
         "concurrency": [ "UpdateDateTime" ],
+        "updateNumber": [ "UpdateNumber" ],
+        "updateProcess": [ "UpdateProcess" ]
       },
       "includes": [
         "dbo.*"

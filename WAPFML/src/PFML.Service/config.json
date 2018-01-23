@@ -13,7 +13,7 @@
         "dbProvider": "SqlServer",
         "connections": {
             "PFML.DAL.Model.DbContext": {
-                "connectionString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=FACTS_MIN;Integrated Security=true"
+                "connectionString": "Data Source=localhost;Initial Catalog=WAPFML;Integrated Security=True"
             }
         }
     },

@@ -42,6 +42,12 @@
         [ "FULL", "Full" ]
       ]
     },
+    "BoolConversion": {
+      "codes": [
+        [ "False", "No" ],
+        [ "True", "Yes" ]
+      ]
+    }
 
     //"state": {
     //    "name": "State",

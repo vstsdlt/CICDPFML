@@ -5,16 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FACTS.Framework.Analysis" Version="2.0.6576.23137" />
-    <PackageReference Include="FACTS.Framework.Common" Version="2.0.6576.23137" />
-    <PackageReference Include="FACTS.Framework.Logic" Version="2.0.6576.23137" />
-    <PackageReference Include="FACTS.Framework.Service" Version="2.0.6576.23137" />
+    <PackageReference Include="FACTS.Framework.Analysis" Version="2.0.6597.14753" />
+    <PackageReference Include="FACTS.Framework.Common" Version="2.0.6597.14753" />
+    <PackageReference Include="FACTS.Framework.Logic" Version="2.0.6597.14753" />
+    <PackageReference Include="FACTS.Framework.Service" Version="2.0.6597.14753" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLogic\PFML.BusinessLogic\PFML.BusinessLogic.csproj" />
-    <ProjectReference Include="..\BusinessLogic\PFML.BusinessLogic.Sample\PFML.BusinessLogic.Sample.csproj" />
+    <ProjectReference Include="..\PFML.BusinessLogic\PFML.BusinessLogic.csproj" />
     <ProjectReference Include="..\PFML.DAL\PFML.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Premium\Registration\EmployerRegistration\" />
   </ItemGroup>
 
 </Project>
