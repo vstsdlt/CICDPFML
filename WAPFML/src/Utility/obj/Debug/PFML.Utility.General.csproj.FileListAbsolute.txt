@@ -1,0 +1,6 @@
+C:\GITWAVS\WAPFML_Master\src\Utility\bin\Debug\PFML.Utility.General.dll
+C:\GITWAVS\WAPFML_Master\src\Utility\bin\Debug\PFML.Utility.General.pdb
+C:\GITWAVS\WAPFML_Master\src\Utility\obj\Debug\PFML.Utility.General.csprojResolveAssemblyReference.cache
+C:\GITWAVS\WAPFML_Master\src\Utility\obj\Debug\PFML.Utility.General.csproj.CoreCompileInputs.cache
+C:\GITWAVS\WAPFML_Master\src\Utility\obj\Debug\PFML.Utility.General.dll
+C:\GITWAVS\WAPFML_Master\src\Utility\obj\Debug\PFML.Utility.General.pdb

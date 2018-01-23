@@ -1,0 +1,9 @@
+C:\GITWAVS\WAPFML_Master\src\PFMLDb\bin\Debug\PFMLDb.dacpac
+C:\GITWAVS\WAPFML_Master\src\PFMLDb\bin\Debug\PFMLDb.dll
+C:\GITWAVS\WAPFML_Master\src\PFMLDb\bin\Debug\PFMLDb.pdb
+C:\GITWAVS\WAPFML_Master\src\PFMLDb\obj\Debug\Model.xml
+C:\GITWAVS\WAPFML_Master\src\PFMLDb\obj\Debug\refactor.xml
+C:\GITWAVS\WAPFML_Master\src\PFMLDb\obj\Debug\postdeploy.sql
+C:\GITWAVS\WAPFML_Master\src\PFMLDb\obj\Debug\predeploy.sql
+C:\GITWAVS\WAPFML_Master\src\PFMLDb\obj\Debug\PFMLDb.dll
+C:\GITWAVS\WAPFML_Master\src\PFMLDb\obj\Debug\PFMLDb.pdb

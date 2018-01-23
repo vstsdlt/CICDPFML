@@ -1,0 +1,14 @@
+C:\WAPFML_Newcode\src\PFML.Db\bin\Debug\PFML.Db.dacpac
+C:\WAPFML_Newcode\src\PFML.Db\bin\Debug\PFML.Db.dll
+C:\WAPFML_Newcode\src\PFML.Db\bin\Debug\PFML.Db.pdb
+C:\WAPFML_Newcode\src\PFML.Db\obj\Debug\Model.xml
+C:\WAPFML_Newcode\src\PFML.Db\obj\Debug\refactor.xml
+C:\WAPFML_Newcode\src\PFML.Db\obj\Debug\postdeploy.sql
+C:\WAPFML_Newcode\src\PFML.Db\obj\Debug\predeploy.sql
+C:\WAPFML_Newcode\src\PFML.Db\obj\Debug\PFML.Db.dll
+C:\WAPFML_Newcode\src\PFML.Db\obj\Debug\PFML.Db.pdb
+C:\GitHubPFML\CICDPFML\WAPFML\src\PFML.Db\bin\Debug\PFML.Db.dacpac
+C:\GitHubPFML\CICDPFML\WAPFML\src\PFML.Db\bin\Debug\PFML.Db.dll
+C:\GitHubPFML\CICDPFML\WAPFML\src\PFML.Db\bin\Debug\PFML.Db.pdb
+C:\GitHubPFML\CICDPFML\WAPFML\src\PFML.Db\obj\Debug\PFML.Db.dll
+C:\GitHubPFML\CICDPFML\WAPFML\src\PFML.Db\obj\Debug\PFML.Db.pdb
